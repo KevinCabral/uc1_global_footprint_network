@@ -1,7 +1,15 @@
 # Setup — running this project on another machine
 
-For someone who received this project as a zip. Takes about five minutes, most of
-it waiting for `pip install`.
+For someone who cloned the repository or received the project as a zip. Takes
+about five minutes, most of it waiting for `pip install`.
+
+```powershell
+git clone https://github.com/KevinCabral/uc1_global_footprint_network.git
+cd uc1_global_footprint_network
+```
+
+The repository does not contain a `.env`, so you will need the API key — see
+[The API key](#the-api-key) below.
 
 See [README.md](README.md) for what the project does and
 [RUNBOOK.md](RUNBOOK.md) for day-to-day commands.
@@ -20,8 +28,8 @@ See [README.md](README.md) for what the project does and
 ## Install
 
 ```powershell
-# 1. unzip, then step into the project
-cd use_case_1
+# 1. step into the project (after cloning, or after unzipping)
+cd uc1_global_footprint_network
 
 # 2. create a virtual environment and activate it
 python -m venv .venv
@@ -40,14 +48,18 @@ skip activation and prefix every command with `.venv\Scripts\python.exe`.
 ### The API key
 
 The project reads the key from a `.env` file, which stands in for AWS Secrets
-Manager. If the zip contains a `.env`, you are ready. If it only contains
-`.env.example`:
+Manager. `.env` is deliberately **not** in the repository — it is git-ignored, so
+the key is never published. Create your own:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-and put the key from the technical test document into `GFN_API_KEY=`.
+then put the key from the technical test document into `GFN_API_KEY=`. Without
+it the pipeline stops with `MissingSecretError`, and the API returns `403`.
+
+The tests do not need the key: they run against fixtures, so `pytest -v` works
+immediately after `pip install`.
 
 ---
 
