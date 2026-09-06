@@ -1,0 +1,15 @@
+# Secrets. The API key lives here; it must never reach the repository.
+.env
+
+# The assignment PDF is excluded too: its text layer contains the same API key,
+# so publishing it on a public repo would leak the key just as surely as .env.
+AWS_DataEng_TechnicalTest_Use_Case_1.pdf
+
+# Generated output: raw JSON, curated Parquet and the duckdb warehouse.
+# All of it is rebuilt by `python main.py run`.
+data/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

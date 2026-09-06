@@ -1,0 +1,50 @@
+[
+  {
+    "year": 2022,
+    "countryCode": 5,
+    "countryName": "Testland",
+    "shortName": "Testland",
+    "isoa2": "TL",
+    "record": "EFConsPerCap",
+    "cropLand": 1.1,
+    "grazingLand": 0.5,
+    "forestLand": 0.4,
+    "fishingGround": 0.1,
+    "builtupLand": 0.2,
+    "carbon": 4.8,
+    "value": 9.5,
+    "score": "3A"
+  },
+  {
+    "year": 2022,
+    "countryCode": 3,
+    "countryName": "Nullavia",
+    "shortName": "Nullavia",
+    "isoa2": "NV",
+    "record": "EFConsPerCap",
+    "cropLand": null,
+    "grazingLand": null,
+    "forestLand": null,
+    "fishingGround": null,
+    "builtupLand": null,
+    "carbon": null,
+    "value": 2.1,
+    "score": "2B"
+  },
+  {
+    "year": 2022,
+    "countryCode": 21,
+    "countryName": "Stringia",
+    "shortName": "Stringia",
+    "isoa2": "ST",
+    "record": "EFConsPerCap",
+    "cropLand": 0.8,
+    "grazingLand": 0.2,
+    "forestLand": 0.3,
+    "fishingGround": 0.05,
+    "builtupLand": 0.1,
+    "carbon": 1.6,
+    "value": 3.1,
+    "score": "3A"
+  }
+]
